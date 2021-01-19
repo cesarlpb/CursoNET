@@ -1,0 +1,113 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Mi Primera Web</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <style>
+        #para {
+            font-size: 1.5em;
+            padding-top: 120px;
+            margin: 20px;
+            /*border: 5px solid black;*/
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" id="welcome">Bienvenid@</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item active">
+            <a class="nav-link" aria-current="page" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacto.html">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ejemplo.html">Imágenes</a>
+          </li>
+        </ul>
+
+        <!--
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        --> 
+
+        <!-- Comentario -->
+    
+      </div>
+    </div>
+  </nav>
+    <div style="height: 500px; margin-bottom: 100px;">
+        <p id="para" style="color: black;">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        <p id="para2"></p>
+        <button id="myBtn" style="margin-left: 20px;" onclick="showText()"><span>Mostrar más texto</span></button>
+
+        <h3>Ejercicio</h3>
+        <p>Modificar la función <i>showText()</i> para que una vez ejecutada el botón ponga "Mostrar menos Texto" y al hacer clic en éste el texto adicional se borre.</p>
+    </div>
+    <div>
+        <button id="myBtn2" style="margin-left: 20px;" onclick="showTime()"><span>Mostrar hora</span></button>
+    </div>
+
+    <h2>Texto con Bootstrap</h2>
+    <p class="text-left">Izquierda para todo viewport (tamaño de pantalla)</p>
+    <p class="text-center">Centrado</p>
+    <p class="text-right" style="text-align: right;">Derecha</p>
+
+    <p class="text-sm-left">Izq pantalla pequeña</p>
+    <p class="text-md-center text-lg-left">Centrado en pantalla mediana.</p>
+    <p class="text-lg-right">Der en pantalla LG</p>
+    <p class="text-xl-left">Izq en pantalla XL</p>
+    <h2>Más formatos de Texto</h2>
+    <p class="text-lowercase">Texto en mayúsculas</p>
+    <p class="text-uppercase">Texto en minúsculas</p>
+    <p class="text-capitalize">texto normal sin mayúsculas</p>
+
+    <h2>Negritas y Cursiva</h2>
+    <p class="font-weight-bold" style="font-weight: bold;">Bold text.</p>
+    <p class="font-weight-normal" style="font-weight: normal;">Normal weight text.</p>
+    <p class="font-weight-light" style="font-weight: 300;">Light weight text.</p>
+    <p class="font-italic" style="font-style:italic;">Italic text.</p>
+
+    <!-- Código Javascript -->
+    <script> 
+        // Esto es un comentario
+        //alert("¡Bienvenido/a a mi página!"); 
+
+        function showText(){
+            var texto = document.getElementById("para2");
+            texto.innerText = "Quas perspiciatis illo inventore ipsa obcaecati cupiditate consequatur voluptatum eaque, minima unde atque animi officiis id necessitatibus. Aperiam possimus hic adipisci impedit?";
+
+            var btn = document.getElementById("myBtn");
+            btn.remove();
+
+            console.log("Se ha ejecutado showText");
+        }
+        function showTime(){
+            var hora = new Date();
+            var btn = document.getElementById("myBtn2");
+            btn.innerText = hora.getHours() + " h";
+        }
+
+        console.log("La página se ha cargado correctamente :)");
+        var fecha = new Date();
+        console.log("La fecha de hoy es: " + fecha);
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html> 
