@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación 1</title>
+</head>
+<body>
+<h2>Preguntas de Teoría</h2>
+    <ol>
+        <li>Explica brevemente los siguientes conceptos, herramientas o tecnologías que hemos visto en clase: 
+            <ul>
+                <li><strong>HTML</strong> 
+                    <p>HyperText Markup Language, es el lenguaje de marcado (mediante etiquetas) con el cual se pueden
+                    crear elementos para presentar en la web. La versión actual es HTML5.</p>
+                </li>
+                <li><strong>CSS</strong></li>
+                    <p>Cascade StyleSheets, son las hojas de estilo que podemos utilizar en nuestros proyectos con 
+                        HTML5 y web apps para dar estilo a nuestras páginas. Su versión actual es CSS3.
+                    </p>
+                <li>Javascript</li>
+                <li>Bootstrap</li>
+                <li>Visual Code</ul>
+            </ul>
+        </li>
+        <li>Escribe debajo un ejemplo de:
+            <ul>
+                <li>Una barra de navegación fija, navbar, hecha por ti con HTML y CSS</li>
+                        <ul class="navbar" id="navbar">
+                            <li><a href="#">Inicio</a></li>
+                            <li><a href="#">Portafolio</a></li>
+                            <li><a href="#">Mis Proyectos</a></li>
+                            <li><a href="#">Acerca de</a></li>
+                            <li><a href="#">Contacto</a></li>
+                        </ul>
+                        <!-- CSS -->
+                        <style>
+                            #navbar {
+                                width: 80%;
+                                top: 0px;
+                                background-color: gray;
+                                border: 1px solid gray;
+                                min-height: 40px;
+                                font-size: 2em;
+                            }
+                            #navbar ul { 
+                                list-style-type: none;
+                            }
+                            .navbar li{
+                                padding: 10px;
+                                margin: 10px;
+                                display: inline;
+                            }
+                            .navbar a {
+                                text-decoration: none;
+                                color: white;
+                            }
+                        </style>
+                <li><p>Un botón que actualice la fecha u hora (cualquier formato existente) cuando se hace click sobre el mismo (puedes añadir Javascript para hacerlo funcional entre las etiquetas</p> 
+                    <p><strong>&lt;script&gt; … &lt;/script&gt;</strong></p> 
+                    <p>o solo hacer la parte de HTML)</p>
+                </li>
+                <div class="container" style="padding: 50px;">
+                    <button id="myBtn" onclick="mostrarHora()">Mira la hora. Haz click</button>
+                </div>
+                <script>
+                    function mostrarHora(){
+                        var fecha = new Date();
+                        var hora = fecha.getHours();
+                        var min = fecha.getMinutes();
+                        var seg = fecha.getSeconds(); 
+                        fecha = hora + ":" + min + ":" + seg;
+                        var boton = document.getElementById("myBtn");
+                        boton.innerText = fecha;
+                    }
+                </script>
+                <p>Más botones en esta herramienta: <a href="https://www.bestcssbuttongenerator.com/" target="_blank">BestCSSButtonGenerator</a></p>
+            </ul>
+        </li>
+        <li>Indica los pasos (y código, si es preciso indicando también dónde en el documento .html se debe colocar) necesarios para realizar las siguientes tareas:
+            <ul>
+                <li>Cargar estilos en un documento HTML desde una hoja de estilos externa almacenada en la misma carpeta que el documento index.html</li>
+                <li>Cargar estilos inline en HTML</li>
+                <li>Cargar estilos de una hoja externa como Bootstrap</li>
+            </ul>
+        </li>
+
+        <li>Resalta la opción verdadera a continuación:
+            <ul>
+                <li>Solo se puede hacer una página responsive usando media queries</li>
+                <li>Bootstrap es la única alternativa para agregar estilos en HTML</li>
+                <li>Para hacer una página estática solo necesito HTML y CSS</li>
+            </ul>
+        </li>
+        <li>
+            <p>Crea una plantilla para tu portafolio con HTML y CSS. 
+            Puedes pegar el código debajo o pegar un enlace a tu repositorio online 
+            (ej. <a href="https://github.com/cesarlpb/CursoNET" target="_blank">Repositorio del Curso de NET</a>).</p>
+
+            <a href="portafolio.html" target="_blank">Mi Portafolio</a>
+        </li>
+
+    </ol>
+</body>
+</html>
