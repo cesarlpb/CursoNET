@@ -1,0 +1,21 @@
+﻿@page
+@model MyWeb2.Pages.ContactoModel
+@{
+}
+
+<div class="container">
+    <h2>Formulario de Contacto</h2>
+    <form>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Correo eléctronico</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">No enviamos spam.</small>
+        </div>
+        
+        <div class="form-check pb-3">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+            <label class="form-check-label" for="exampleCheck1">Acepto las condiciones de <a href="/Privacy" target="_blank">Privacidad</a></label>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+</div>

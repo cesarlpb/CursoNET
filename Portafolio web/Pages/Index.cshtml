@@ -1,0 +1,58 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Inicio";
+}
+
+<!-- Banner -->
+<main class="px-3 text-black-50 text-center">
+    <h1>César Patiño</h1>
+    <p class="lead">Desarrollador web</p>
+    <p class="lead">
+        <a href="#about" class="btn btn-lg btn-primary border-dark bg-white text-dark">Más información</a>
+    </p>
+</main>
+<!-- Proyectos -->
+<div class="row pt-5">
+    <div class="col-lg-4">
+        <img width="140" height="140" src="~/assets/calculadora.svg"/>
+        <h2>Calculadora</h2>
+        <p>Aplicación que realiza las operaciones elementales y algunas más.</p>
+        <p><a class="btn btn-secondary" href="#" role="button">Ver »</a></p>
+    </div><!-- /.col-lg-4 -->
+    <div class="col-lg-4">
+        <img width="140" height="140" src="~/assets/euro.svg" />
+        <h2>Conversor de Divisas</h2>
+        <p>Una aplicación sencilla para cambiar entre algunas divisas.</p>
+        <p><a class="btn btn-secondary" href="#" role="button">Ver »</a></p>
+    </div><!-- /.col-lg-4 -->
+    <div class="col-lg-4">
+        <img width="140" height="140" src="~/assets/memo.svg" />
+        <h2>Memos</h2>
+        <p>Aplicación para escribir notas o "to dos" por hacer.</p>
+        <p><a class="btn btn-secondary" href="#" role="button">Ver »</a></p>
+    </div><!-- /.col-lg-4 -->
+</div>
+<!-- Acerca de -->
+<div class="container">
+    <div class="row pt-5" id="about">
+        <div class="col-lg-8 col-sm-10">
+            <h2>Sobre Mí</h2>
+            <p>He trabajado en programación durante varios años.</p>
+            <p>Experiencia en programación científica y web.</p>
+            <p>También, conocimientos de blockchain y técnicos.</p>
+        </div>
+        <div class="col-lg-4 col-sm-10">
+            <img src="https://via.placeholder.com/300" width="300" />
+        </div>
+    </div>
+</div>
+<!-- Contacto -->
+<div class="container pt-5 pb-5">
+    <div class="row col-lg-6 col-sm-10">
+        <h2>Envíame un mensaje</h2>
+    </div>
+    <div class="row col-lg-6 col-sm-10">
+        <a class="btn btn-lg btn-secondary border-dark bg-white text-dark" href="/Contacto" target="_blank">Contactar</a>
+    </div>
+</div>
